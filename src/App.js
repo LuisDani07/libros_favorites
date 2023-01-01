@@ -1,8 +1,22 @@
 import './App.css'
+import { Route,Routes } from 'react-router-dom';
+import BookList from './components/BookList';
+import BookDetails from './components/BookDetails';
+import Favorites from './components/Favorites';
+import Footer from './components/Footer';
+import Navbar from './components/Navbvar';
 
 function App() {
   return (
-    <div className='App'></div>
+    <div className='App'>
+      <Navbar/>
+       <Routes>
+          <Route path="/" element={<BookList/>}/>
+          <Route path="/book/:id" element={<BookDetails/>}/>
+          <Route path="/favorites" element={<Favorites/>}/>
+       </Routes>
+       <Footer/>
+    </div>
   );
 }
 
