@@ -19,3 +19,10 @@
     align-items: center;
     justify-content: center;
 }
+.book-list{
+    min-height:80vh;
+    width:100%;
+    display:grid;
+    grid-template-columns: repeat(3,fr);
+   justify-items: center;
+}
