@@ -12,3 +12,10 @@
     align-items: center;
     justify-content: space-evenly;
 }
+.footer{
+    background:black;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
