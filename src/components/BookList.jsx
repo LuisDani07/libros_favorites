@@ -10,10 +10,14 @@ function BookList() {
         }).catch(err=>console.log(err))
     },[])
   return (
-    <div className='book-list'>BookList
-        <h1>hi</h1>
-        <h1>hi2</h1>
-        <h1>hi3</h1>
+    <div className='book-list'>
+         {books.map((book)=>(
+             <div key={book.id}>
+                <div><h1>{book.title}</h1></div>
+                <div><img src={book.image_url} alt="#"/></div>
+                 <div><button>Add to favorites</button></div>
+             </div>
+         ))}
     </div>
   )
 }
