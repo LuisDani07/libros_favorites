@@ -1,12 +1,13 @@
 import {useState, useEffect} from 'react'
 import { API_URL } from '../API'
 import axios from 'axios'
+import {useAppContext} from './context/App_context';
 
 function BookList() {
     const [books, setBooks]=useState([]);
-    const shoot = () => {
-      console.log("hola");
-    }
+
+    const  {favorites,addToFavorites,removeFromFavorites}=useAppContext();
+     
     useEffect(()=>{
         axios.get(API_URL).then(res=>{
             console.log(res.data);
@@ -20,7 +21,7 @@ function BookList() {
              <div key={book.id} className='book'>
                 <div><h4>{book.title}</h4></div>
                 <div><img src={book.image_url} alt="#"/></div>
-                 <div><button onClick={() => shoot()}>Add to favorites</button></div>
+                 <div><button >Add to favorites</button></div>
              </div>
          ))}
     </div>
