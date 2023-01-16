@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link} from 'react-router-dom';
 function Navbvar() {
 
   return (
@@ -7,7 +7,11 @@ function Navbvar() {
         <div>
             <h1 >React Books App</h1>
         </div>
-        <div>Your favorites</div>
+        <div>
+             <Link to='/favorites'>
+                   <h3>Your Favorites</h3>
+             </Link>
+        </div>
     </div>
   )
 }
