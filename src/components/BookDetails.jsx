@@ -11,16 +11,15 @@ function BookDetails() {
    axios.get(`${Books_details}${id}`)
    .then(res=>{
     setBook(res.data)
-    console.log(res.data);
    }).catch(err=>console.log(err));
   },[id])
   return (
   <div className='book-details'>
-              <div>
+              <div className='book-image'>
                   <h2>{book.title}</h2>
                   <img src={book.image_url} alt="#" />
               </div>
-              <div>
+              <div className='book-description'>
                  <h2>Description</h2>
                  <p>{book.description}</p>
                  <h2>Authors</h2>

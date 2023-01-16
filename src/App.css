@@ -67,3 +67,14 @@ a{
     color:white;
     text-decoration: none;
 }
+.book-details{
+    min-height: 80vh;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding:10px;
+}
+.book-description{
+    margin:0 10px;
+}
